@@ -31,7 +31,9 @@ function downloadImages() {
 	 Promise.all(promises)
 	.then((data) =>{
 		data.forEach((image) =>{
-			output.appendChild(image);
+			const img = document.createElement("img");
+			img.appendChild(image);
+			output.appendChild(img);
 		})
 	})
 	.catch((data)=>
